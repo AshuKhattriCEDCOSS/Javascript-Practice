@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Area</title>
+    <style>
+      #firstdiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        margin: 5% auto;
+      }
+      
+      .seconddiv {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: auto;
+      }
+      .seconddiv > p {
+        font-size: larger;
+      }
+      .seconddiv > input {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: large;
+      }
+      #firstdiv > button {
+        width: 17%;
+        padding: 12px;
+        text-align: center;
+        margin-left: 45%;
+        border-radius: 10px;
+        font-weight: bold;
+        background-color: rgb(197, 197, 197);
+      }
+      .thirddiv {
+        font-size: larger;
+        margin: 10px 32%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="firstdiv">
+      <div class="seconddiv">
+        <p>Length of Rectangle</p>
+        <input type="text" id="text1" />
+        <p>mtr</p>
+      </div>
+      <div class="seconddiv">
+        <p>Width of Rectangle</p>
+        <input type="text" id="text2"/>
+        <p>mtr</p>
+      </div>
+
+      <button onclick="calc()">Calculate Area & Perimeter</button>
+
+      <div class="thirddiv">Area is <span id="area"></span> sq. mtr.</div>
+      <div class="thirddiv">
+        Perimeter is <span id="text3"> </span> mtr
+      </div>
+    </div>
+
+    <script>
+      function calc() {
+        var a = document.getElementById("text1").value;
+        var b = document.getElementById("text2").value;
+
+        document.getElementById("area").innerHTML = a * b;
+        document.getElementById("text3").innerHTML =
+          (Number(a) + Number(b)) * 2;
+      }
+    </script>
+  </body>
+</html

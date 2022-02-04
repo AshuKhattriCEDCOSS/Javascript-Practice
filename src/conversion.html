@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      #text1 input[type="text"] {
+        margin-top: 100px;
+        border-radius: 10px;
+        width: 25%;
+        height: 60px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 18px;
+      }
+
+      label {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        accent-color: black;
+      }
+      #button {
+        margin-right: 120px;
+      }
+      input[type="button"] {
+        width: 25%;
+        height: 50px;
+        margin-top: 70px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+    </style>
+ </head>
+    <body>
+      <center>
+        <div id="main">
+          <div id="text1">
+            <input type="text" id="text1"/>
+          </div>
+          <br /><br />
+          <div id="button">
+            &nbsp;
+            <input type="radio" id="min" name="check" />
+            <label>hours to mins</label>
+            <br /><br />
+            <input type="radio" id="sec" name="check" />
+            <label>hours to sec</label>
+          </div>
+          <br />
+       
+          <div id="result">
+               <input type="button" onclick="func()" value="Convert" />
+            <script>
+              function func() {
+                let n = document.getElementById("text1").value;
+                var a = document.getElementById("min").value;
+                //   var temp=parseInt(n);
+               alert(n);
+              }
+                /* if(a!="" && n!="")
+                  {
+                      var r;
+                      r=n*60;
+                      document.write(n+" hours="+r)*/
+              
+            </script>
+          </div>
+        </div>
+      </center>
+    </body>
+</html>
