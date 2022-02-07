@@ -20,8 +20,9 @@
         height: 20px;
         accent-color: black;
       }
-      #button {
+      #button1 {
         margin-right: 120px;
+        
       }
       input[type="button"] {
         width: 25%;
@@ -30,16 +31,25 @@
         font-size: 20px;
         border-radius: 10px;
       }
+      #result{
+          font-size:20px;
+           
+      }
+      input[type="button"]
+      {
+         margin-top:20px;
+      }
     </style>
+    
  </head>
     <body>
       <center>
         <div id="main">
           <div id="text1">
-            <input type="text" id="text1"/>
+            <input type="text" id="text2">
           </div>
           <br /><br />
-          <div id="button">
+          <div id="button1">
             &nbsp;
             <input type="radio" id="min" name="check" />
             <label>hours to mins</label>
@@ -48,24 +58,35 @@
             <label>hours to sec</label>
           </div>
           <br />
-       
+          
           <div id="result">
-               <input type="button" onclick="func()" value="Convert" />
-            <script>
-              function func() {
-                let n = document.getElementById("text1").value;
-                var a = document.getElementById("min").value;
-                //   var temp=parseInt(n);
-               alert(n);
-              }
-                /* if(a!="" && n!="")
-                  {
-                      var r;
-                      r=n*60;
-                      document.write(n+" hours="+r)*/
               
-            </script>
+               <script>
+                function func() {
+                  let n = document.getElementById("text2").value;
+                  var a = document.getElementById("min").checked;
+                  var b = document.getElementById("sec").checked;
+               
+                  if(a==true && n!="")
+                    {
+                        var r;
+                        r=n*60;
+                        document.getElementById("result").innerHTML = ("<br>"+n+" hours= "+r+" mins");
+                    }
+                    else if(b==true && n!="")
+                    {
+                        var r;
+                        r=n*3600; 
+                        document.getElementById("result").innerHTML = ("<br>"+n+" hours= "+r+" sec");
+                    }
+                    else{
+                        document.getElementById("result").innerHTML = "<br>Field can't be blank";
+                    }
+                }
+                
+              </script>
           </div>
+          <input type="button" onclick="func()" value="Convert" />
         </div>
       </center>
     </body>
